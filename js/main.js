@@ -16,7 +16,7 @@ const proname = document.getElementById("proname");
 const seller = document.getElementById("seller");
 const price = document.getElementById("price");
 
-// butões criados
+// botões criados
 const btncreate = document.getElementById("btn-create");
 const btnread = document.getElementById("btn-read");
 const btnupdate = document.getElementById("btn-update");
