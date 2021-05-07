@@ -15,5 +15,5 @@ Baseado no tutorial do Canal [Daily Tuition](https://www.youtube.com/watch?v=pce
 ## **Ambientes de Desenvolvimento e Referências**
 
 * IDE:    **VSCODE 1.55.1**
-* Bootstrap
-* Dexie.js
+* [Bootstrap](https://getbootstrap.com/)
+* [Dexie.js](http://dexie.org/)
