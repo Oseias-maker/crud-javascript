@@ -3,7 +3,7 @@ import prodb, {
     createEle,
     getData,
     SortObj
-} from "./module.js";
+} from "./Module.js";
 
 
 let db = prodb("Productdb", {
