@@ -1,6 +1,6 @@
 
 # CRUD JAVASCRIPT
-Aplicação desenvolvida em Javascript contendo Bootstrap. 
+Aplicação que realiza um CRUD num banco de dados local desenvolvida em Javascript e contendo Bootstrap. 
 
 Baseado no tutorial do Canal [Daily Tuition](https://www.youtube.com/watch?v=pcelNF8Ckhk&t=1147s&ab_channel=DailyTuition).
 
