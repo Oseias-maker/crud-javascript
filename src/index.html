@@ -22,7 +22,7 @@
   <body>
     <div class="container text-center">
       <h1 class="bg-light py-4 text-info">
-        <i class="fab fa-canadian-maple-leaf"></i>Hello World
+        <i class="fas fa-clipboard-list"></i> Controle de Vendas
       </h1>
     </div>
 
@@ -32,7 +32,6 @@
           type="text"
           id="userid"
           class="form-control"
-          readonly
           placeholder="ID"
           autocomplete="off"
         />
@@ -64,8 +63,8 @@
       </form>
     </div>
 
-    <!-- Create, update, read and delete button-->
-    <div class="d-grid gap-2 d-md-flex justify-content-md-center"">
+    <!-- Botões de: Create, update, read and delete -->
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
       <button class="btn btn-success" id="btn-create">Criar</button>
       <button class="btn btn-primary" id="btn-read">Ler</button>
       <button class="btn btn-warning" id="btn-update">Atualizar</button>
@@ -86,25 +85,25 @@
         </thead>
         <tbody id="tbody">
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
             <td><i class="fas fa-edit btnedit"></i></td>
             <td><i class="fas fa-trash-alt btndelete"></i></td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
             <td><i class="fas fa-edit btnedit"></i></td>
             <td><i class="fas fa-trash-alt btndelete"></i></td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+            <th scope="row"></th>
+            <td colspan="2"></td>
+            <td></td>
             <td><i class="fas fa-edit btnedit"></i></td>
             <td><i class="fas fa-trash-alt btndelete"></i></td>
           </tr>
@@ -116,12 +115,12 @@
     </div>
 
     <div class="w-100 btn btn-success insermsg">
-      Data Inserted Successfully...!
+      Dados inseridos com sucesso!
     </div>
     <div class="w-100 btn btn-warning updatemsg">
-      Data Updated....! Refresh Database to See Result
+      Dados Atualizados! Recarregue o Database para visuaizar o resultado.
     </div>
-    <div class="w-100 btn btn-danger deletemsg">Data Deleted....></div>
+    <div class="w-100 btn btn-danger deletemsg">Todos os Dados foram Deletados.</div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
@@ -131,7 +130,7 @@
     <!--Dexie API-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/3.0.3/dexie.min.js"></script>
 
-    <!--Custom Javascript main.js-->
+    <!--Customização com Javascript main.js-->
     <script src="../js/main.js" type="module"></script>
   </body>
 </html>

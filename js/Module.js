@@ -1,82 +1,77 @@
-const productdb = (dbname, table) => {
-    //criar banco de dados
-
-    const db = new Dexie(dbname)
+const productsdb = (dbname, table) => {
+    const db = new Dexie(dbname);
     db.version(1).stores(table);
     db.open();
-    /*
-        const db = new Dexie('myDb');
-        db.version(1).stores({
-            friends: `name, age`
-        })
-    */
-    return db;
-}
 
-//insere função
+    return db;
+};
+
 const bulkcreate = (dbtable, data) => {
     let flag = empty(data);
     if (flag) {
         dbtable.bulkAdd([data]);
-        console.log("data inserida com sucesso...!")
+        console.log("data inserted successfully...!");
     } else {
-        console.log("Please Provide Data...!")
+        console.log("Por favor, forneça dados..!");
     }
     return flag;
-}
+};
 
-// checa a validação da textbox
+// criando elementos dinâmicos
+const createEle = (tagname, appendTo, fn) => {
+    const element = document.createElement(tagname);
+    if (appendTo) appendTo.appendChild(element);
+    if (fn) fn(element);
+};
+
+// checando a validação da caixa de texto
 const empty = object => {
     let flag = false;
-
     for (const value in object) {
         if (object[value] != "" && object.hasOwnProperty(value)) {
             flag = true;
         } else {
-            flag = false
+            flag = false;
         }
     }
     return flag;
-}
+};
 
-// get data do database
-const getData = (dbtable, fn) => {
+// getData direto do database
+const getData = (dbname, fn) => {
     let index = 0;
     let obj = {};
-
-    dbtable.count((count) => {
+    dbname.count(count => {
+        // contando as linhas da tabela usando um método de conta
         if (count) {
-            dbtable.each(table => {
-                obj = Sortobj(table);
-                fn(obj, index++)
-
-            })
+            dbname.each(table => {
+                // tabela => retornando um objeto data da tabela
+                // para organizar a ordem vamos criar um looping
+                obj = SortObj(table);
+                fn(obj, index++); // chamando uma função com um argumento data 
+            });
         } else {
             fn(0);
         }
-    })
-}
+    });
+};
 
-const Sortobj = sortobj => {
-    let obj = {}
+const SortObj = (sortobj) => {
+    let obj = {};
     obj = {
         id: sortobj.id,
         name: sortobj.name,
         seller: sortobj.seller,
         price: sortobj.price
-    }
+    };
     return obj;
 }
 
-const createEle = (tagname, appendTo, fn) => {
-    const element = document.createElement(tagname);
-    if (appendTo) appendTo.appendChild(element);
-    if (fn) fn(element);
-}
 
-
-export default productdb;
+export default productsdb;
 export {
     bulkcreate,
-    getData
-}
+    createEle,
+    getData,
+    SortObj
+};
