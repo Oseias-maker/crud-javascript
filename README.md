@@ -1,6 +1,6 @@
 
 # CRUD JAVASCRIPT
-Aplicação desenvolvida em ReactJS contendo Bootstrap. 
+Aplicação desenvolvida em Javascript contendo Bootstrap. 
 
 Baseado no tutorial do Canal [Daily Tuition](https://www.youtube.com/watch?v=pcelNF8Ckhk&t=1147s&ab_channel=DailyTuition).
 
@@ -8,7 +8,6 @@ Baseado no tutorial do Canal [Daily Tuition](https://www.youtube.com/watch?v=pce
 
 
 &nbsp;
-
 
 # Requisitos
 
